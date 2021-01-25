@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import socket
+import struct
 from time import sleep
 
 from PARAMETERS import *
