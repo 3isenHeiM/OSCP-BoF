@@ -1,14 +1,17 @@
 # Buffer Overflow methodology
 
-[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/3isenHeiM/OSCP-BoF/master)](https://github.com/3isenHeiM/OSCP-BoF/commits)
-[![GitHub stars](https://img.shields.io/github/stars/3isenHeiM/OSCP-BoF)](https://github.com/3isenHeiM/OSCP-BoF/stargazers)
+![GitHub Repo stars](https://img.shields.io/github/stars/3isenHeiM/OSCP-BoF?style=social) [![GitHub last commit (branch)](https://img.shields.io/github/last-commit/3isenHeiM/OSCP-BoF/master)](https://github.com/3isenHeiM/OSCP-BoF/commits) [![GitHub stars](https://img.shields.io/github/stars/3isenHeiM/OSCP-BoF)](https://github.com/3isenHeiM/OSCP-BoF/stargazers) ![Language](https://img.shields.io/badge/-python-3776AB?logo=python&logoColor=white)
+
+
+![GitHub](https://img.shields.io/github/license/3isenHeiM/OSCP-BoF)
+
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/3isenHeiM?style=social)](https://twitter.com/3isenHeiM)
 
 
 ## Introduction
 
-These are 7 simple python scripts + a methodology easing the exploitation.
+These are 7 simple python scripts and a methodology **to ease** (not *automate* !) the exploitation.
 Each script targets a phase of the exploitation :
 
 1. Trigger the BoF (this is facultative for OSCP since they give you a code snippet)
@@ -23,13 +26,27 @@ It's based on the [do stack buffer overflow good](https://github.com/justinsteve
 
 ## How to use
 
-Follow each step and you'll be able to craft a working example of a BoF exploitation
+Follow each step and you'll be able to craft a working example of a BoF exploitation.
+
+All the specific variable are stored in [1 single resource file](PARAMETERS.py),
+to avoid any confusion during the exam.
+
+After each step, fill the proper variables with values found and they'll be re-used for the next step
 
 Note: If after each debug operation performed, the application has become unresponsive; Immunity Debugger should be closed first, then the "vulnapp.exe" application should be restarted, and Attach and Run should be done on Immunity Debugger.
 
+## 0. Pre-start
+
+Fill in the following variables in the [resource file](PARAMETERS.py) depending on the host to attack :
+ * ``RHOST`` : the IP address of the host
+ * ``RPORT`` : the port on which to access the application to exploit
+
 ## 1. Segmentation fault : [1_segfault.py](1_segfault.py)
 
-Send enough length string for victim system crash
+Send enough length string for victim system crash.
+
+Please note that the total length to input is often given in the exmaple they
+provide in the exam.
 
 Note the offeset in ``PARAMETERS.py``, in the variable ``offset_eip``.
 
