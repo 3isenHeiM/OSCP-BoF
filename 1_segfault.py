@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import socket
 
-from PARAMETERS import *
+from PARAMETERS import RHOST, RPORT, buf_totlen
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((RHOST, RPORT))

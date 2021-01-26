@@ -1,9 +1,12 @@
 # Buffer Overflow methodology
 
-![GitHub Repo stars](https://img.shields.io/github/stars/3isenHeiM/OSCP-BoF?style=social) [![GitHub last commit (branch)](https://img.shields.io/github/last-commit/3isenHeiM/OSCP-BoF/master)](https://github.com/3isenHeiM/OSCP-BoF/commits) ![Language](https://img.shields.io/badge/-python-3776AB?logo=python&logoColor=white)
+![GitHub Repo stars](https://img.shields.io/github/stars/3isenHeiM/OSCP-BoF?style=social) [![GitHub last commit (branch)](https://img.shields.io/github/last-commit/3isenHeiM/OSCP-BoF/master)](https://github.com/3isenHeiM/OSCP-BoF/commits) ![GitHub](https://img.shields.io/github/license/3isenHeiM/OSCP-BoF)
 
 
-![GitHub](https://img.shields.io/github/license/3isenHeiM/OSCP-BoF)
+[![Python 3](https://img.shields.io/badge/python-3-blue.svg?logo=python&logoColor=white)](https://www.python.org/downloads/release/python-3/) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/3isenHeiM/OSCP-BoF/Linting)
+
+
+
 
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/3isenHeiM?style=social)](https://twitter.com/3isenHeiM)
