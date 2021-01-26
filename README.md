@@ -1,6 +1,6 @@
 # Buffer Overflow methodology
 
-![GitHub Repo stars](https://img.shields.io/github/stars/3isenHeiM/OSCP-BoF?style=social) [![GitHub last commit (branch)](https://img.shields.io/github/last-commit/3isenHeiM/OSCP-BoF/master)](https://github.com/3isenHeiM/OSCP-BoF/commits) [![GitHub stars](https://img.shields.io/github/stars/3isenHeiM/OSCP-BoF)](https://github.com/3isenHeiM/OSCP-BoF/stargazers) ![Language](https://img.shields.io/badge/-python-3776AB?logo=python&logoColor=white)
+![GitHub Repo stars](https://img.shields.io/github/stars/3isenHeiM/OSCP-BoF?style=social) [![GitHub last commit (branch)](https://img.shields.io/github/last-commit/3isenHeiM/OSCP-BoF/master)](https://github.com/3isenHeiM/OSCP-BoF/commits) ![Language](https://img.shields.io/badge/-python-3776AB?logo=python&logoColor=white)
 
 
 ![GitHub](https://img.shields.io/github/license/3isenHeiM/OSCP-BoF)
