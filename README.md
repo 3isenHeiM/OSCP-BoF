@@ -27,13 +27,13 @@ Follow each step and you'll be able to craft a working example of a BoF exploita
 
 Note: If after each debug operation performed, the application has become unresponsive; Immunity Debugger should be closed first, then the "vulnapp.exe" application should be restarted, and Attach and Run should be done on Immunity Debugger.
 
-## 1. Segmentation fault : [1_segfault.py]()
+## 1. Segmentation fault : [1_segfault.py](1_segfault.py)
 
 Send enough length string for victim system crash
 
 Note the offeset in ``PARAMETERS.py``, in the variable ``offset_eip``.
 
-## 2. Find the offset : [2_find_offset.py]()
+## 2. Find the offset : [2_find_offset.py](2_find_offset.py)
 
 Generate the pattern (adapt the buffer lenght) :
 
@@ -58,7 +58,7 @@ Or, type this in Immunity Debugger : `!mona findmsp`.
 
 Note the value of the EIP offet in the variable ``offset_eip`` in ``PARAMETERS.py``, and the value of the ESP offset in the variable ``offset_esp``.
 
-## 3. Control the EIP : [3_confirm_offset.py]()
+## 3. Control the EIP : [3_confirm_offset.py](3_confirm_offset.py)
 
 Execute this script as is.
 
@@ -66,7 +66,7 @@ In Immunity Debugger, make sure that
    - **BBBB** in the EIP (in hex, so ``42424242``)
    - **CCCCDDDDD.....** is written in what ESP points to
 
-## 4. Find the bad chars : [4_find_badchars.py]()
+## 4. Find the bad chars : [4_find_badchars.py](4_find_badchars.py)
 
 Send it to the application
 
@@ -86,7 +86,7 @@ Compare this file with the stack contents :
 In the mona output, ``Possibly bad chars`` are output.
 Put them in the ``badchars`` array in ``PARAMETERS.py``.
 
-## 5. Confirm badchars & find a JMP ESP instruction : [5_find_jmp_esp.py]()
+## 5. Confirm badchars & find a JMP ESP instruction : [5_find_jmp_esp.py](5_find_jmp_esp.py)
 
 ### a. Confirm badchars
 
@@ -121,7 +121,7 @@ whatever we have put in the stack.
 Put the address returned in the variable ``ptr_jmp_esp`` in ``PARAMETERS.py``
 
 
-## 6. Pop calc : [6_pop_calc.py]()
+## 6. Pop calc : [6_pop_calc.py](6_pop_calc.py)
 
 This will confirm the code execution on the target host.
 This can be used to validate the build-up of the exploit, and set a working basis.
@@ -139,7 +139,7 @@ Some guys use a NOP sled, here is a more proper way ;)
 
 Launch the script and enjoy popping calc!
 
-## 7. Create shellcode : [7_exploit.py]()
+## 7. Create shellcode : [7_exploit.py](7_exploit.py)
 
 Now, you can craft any other shellcode as long as you respect the badchars :
 
